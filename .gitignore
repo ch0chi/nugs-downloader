@@ -1,0 +1,4 @@
+node_modules/
+ApiTesting/
+.env
+.idea/
