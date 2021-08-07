@@ -6,6 +6,12 @@ const router = express.Router();
 // router.use(AuthMiddleware.authenticate);
 router.post('/',
     (req, res) =>
-        nugsController.getNugsScope(req, res));
+        nugsController.getNugsScope(req, res)
+);
+
+router.get('/bookmarklet',
+    (req, res) =>
+        nugsController.generateBookmarklet(req,res)
+);
 
 export {router as nugsRoute};
