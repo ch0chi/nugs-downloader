@@ -20,7 +20,7 @@ Node version >= 14.0.0
     - `cd client`
     - `npm install && npm run build`
 5. Copy the .env.example file to a new .env file
-    - `cp .env.example .env`
+    - `cp .env.example .env` (make sure you are inside of the root directory)
 6. Configure the .env file
 ```
    BASE_DIR="<required: the directory where you want to all shows to download to.>"
