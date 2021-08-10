@@ -1,41 +1,4 @@
 <template>
-<!--    <div class="main content columns is-centered">-->
-<!--        <div class="column is-centered">-->
-<!--            <i class="fas fa-share big-arrow"></i>-->
-
-<!--            <div id="step-1" class="block">-->
-<!--                <h1 class="block">1. Drag the buttons below into your bookmarks bar</h1>-->
-<!--                <div class="columns is-centered">-->
-<!--                    <div class="column is-half">-->
-<!--                        <div class="columns is-centered">-->
-<!--                            <div class="column">-->
-<!--                                <Bookmarklet-->
-<!--                                    init-name="Live Phish Downloader"-->
-<!--                                    init-endpoint="/livephish/bookmarklet"-->
-<!--                                />-->
-<!--                            </div>-->
-<!--                            <div class="column">-->
-<!--                                <Bookmarklet-->
-<!--                                    init-name="Nugs Downloader"-->
-<!--                                    init-endpoint="/nugs/bookmarklet"-->
-<!--                                />-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div id="step-2" class="block">-->
-<!--                <h1 class="block">2. Navigate to any show on nugs.net or live phish+</h1>-->
-<!--                <p>make sure</p>-->
-<!--            </div>-->
-
-<!--            <div id="step-3">-->
-
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
     <div class="container-fluid">
         <section class="section">
             <h1 class="title">Step One</h1>
@@ -127,7 +90,6 @@ export default {
 
 <style lang="scss">
 #app {
-    height:100vh;
     background:#1F2330;
     color:white;
     text-align: center;

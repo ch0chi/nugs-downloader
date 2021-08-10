@@ -3,6 +3,7 @@ import ProgressBar from 'progress';
 import fs from 'fs';
 import chalk from 'chalk';
 
+//todo add error handling for failed
 export class DownloadService {
 
     async downloadTrack(url, path, title, currTrack, totalTracks) {
