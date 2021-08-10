@@ -14,7 +14,7 @@ const baseConfig = {
     serverHost: process.env.SERVER_HOST || `localhost`,
     serverPort: process.env.SERVER_PORT || `3000`,
 }
-export const serverUrl = `http://${baseConfig.serverHost}:${baseConfig.serverPort}`
+export const serverUrl = `http://${baseConfig.serverHost}:${baseConfig.serverPort}/api`
 
 
 

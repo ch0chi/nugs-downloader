@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import {serverUrl} from "../config/config.env.js";
+const app = createApp(App);
+app.provide('$serverUrl',serverUrl);
+app.mount('#app');

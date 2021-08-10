@@ -17,6 +17,7 @@ const baseConfig = {
     proxyPort: config.PROXY_PORT || `8121`,
     serverHost: config.SERVER_HOST || `localhost`,
     serverPort: config.SERVER_PORT || `3000`,
+    clientUrl: config.CLIENT_URL || `http://localhost:8081`
 }
 
 const urlConfig = {
