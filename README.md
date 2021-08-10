@@ -68,3 +68,8 @@ Starting the download server: `npm run serve`
 ### Bookmarklets
 The app provides an auto-generated bookmarklet for each streaming platform.
 If you ever need to re-generate the bookmarklets, follow the "First Time Usage" steps.
+
+### Converting tracks to mp3
+I provided a bash shell script that will convert all ".m4a" files into .mp3 files. You'll need to install ffmpeg to use the shell script.
+- The shell script can be run either inside of the downloaded album directory or outside.
+- The script will first convert the track to mp3 and then delete the old m4a track.
