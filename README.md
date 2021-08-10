@@ -15,9 +15,10 @@ Node version >= 14.0.0
 
 1. `git clone git@github.com:ch0chi/nugs-downloader.git`
 2. `cd nugs-downloader`
-3. Run `npm install` in server root to install required packages.
-4. Build the client
-    - `npm run build-client`
+3. Run `npm install` in server root to install required packages for the server.
+4. Install and build client packages
+    - `cd client`
+    - `npm install && npm run build`
 5. Copy the .env.example file to a new .env file
     - `cp .env.example .env`
 6. Configure the .env file
