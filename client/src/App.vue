@@ -26,7 +26,7 @@
         <section class="section">
             <h1 class="title">Step Two</h1>
             <h2 class="subtitle">
-                In your browser, visit either nugs.nut or plus.livephish.com and navigate to a show.
+                In your browser, visit either <a href="https://play.nugs.net/">play.nugs.net</a> or <a href="https://plus.livephish.com/">plus.livephish.com</a> and navigate to a show.
             </h2>
             <p>The downloader will only work if inside a show (recording). The app does not allow for downloading single tracks.</p>
         </section>
