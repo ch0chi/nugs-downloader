@@ -26,45 +26,21 @@
         <section class="section">
             <h1 class="title">Step Two</h1>
             <h2 class="subtitle">
-                Make sure you have the backend server running and have setup your .env file.
+                In your browser, visit either nugs.nut or plus.livephish.com and navigate to a show.
             </h2>
-            <div class="columns is-centered">
-                <div class="column is-5">
-                    <div class="columns has-text-left content">
-                        <ul>
-                            Inside the project root
-                            <li>
-                                Copy the <span class="is-family-monospace">.env.example</span> to a new file called <span class="is-family-monospace">.env</span> and, at the very least, set the
-                                <span class="is-family-monospace"> BASE_DIR</span> variable <br>
-                                to the directory you want to save your music to.
-                            </li>
-                            <li>
-                                Run <span class="is-family-monospace">npm run serve</span> to start the server
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
+            <p>The downloader will only work if inside a show (recording). The app does not allow for downloading single tracks.</p>
         </section>
 
         <section class="section">
             <h1 class="title">Step Three</h1>
             <h2 class="subtitle">
-                In your browser, visit either nugs.nut or plus.livephish.com and navigate to a show.
-            </h2>
-        </section>
-
-        <section class="section">
-            <h1 class="title">Step Four</h1>
-            <h2 class="subtitle">
-                Once you have found a 🔥 show, click the bookmarklet link that relates to the streaming platform you're currently on.<br>
+                Once you have found a 🔥 show, click the bookmarklet link (the bookmark you just added in your browser's bookmark bar)<br> that relates to the streaming platform you're currently on.
                 (i.e. if you're on nugs.net, click the Nugs Downloader bookmarklet)
             </h2>
         </section>
 
         <section class="section">
-            <h1 class="title">Step Five</h1>
+            <h1 class="title">Step Four</h1>
             <h2 class="subtitle">
                 The server will start downloading your show!
             </h2>
@@ -89,8 +65,14 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+body{
+    min-height: 100vh;
+    padding: 0;
     background:#1F2330;
+}
+#app {
+    width: 100%;
+
     color:white;
     text-align: center;
     font-family: Avenir, Helvetica, Arial, sans-serif;

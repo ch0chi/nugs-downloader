@@ -12,10 +12,11 @@ export class DownloadController {
     }
 
     async downloadTracks(req, res) {
-
         const tracks = req.body.tracks;
         const album = req.body.album;
         const artist = req.body.artist;
+
+        console.log(chalk.cyan(`Download initiated for ${artist} - ${album}...`));
 
         const baseDir = process.env.BASE_DIR;
         const artistDirName = `${baseDir}${artist.trim()}`;

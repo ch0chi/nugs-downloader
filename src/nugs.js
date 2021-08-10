@@ -1,6 +1,6 @@
 import axios from 'axios';
 import {Recording} from "./recording.js";
-
+import {envConfig} from "../config/config.env.js";
 export class Nugs extends Recording{
 
     nugsUser;
@@ -42,7 +42,7 @@ export class Nugs extends Recording{
      * @param {*} trackID
      */
     async fetchTrackUrl(trackID) {
-        const proxyurl = process.env.PROXY_URL ?? "http://localhost:8121";
+        const proxyurl = envConfig.proxyUrl;
         const url = this.createBaseStreamUrl() + trackID;
         try{
             const res = await axios.get(`${proxyurl}/${url}`);
