@@ -38,7 +38,7 @@ Node version >= 14.0.0
 When first using the app, you'll need to add the bookmarklet scripts to your browser's bookmark bar.
 Luckily, this app will auto-generate these into draggable links via a fancy front-end.
 
-Start up the client and api server:
+Start up the client and api server (must be in the root directory of the app, not in client):
 `npm run start-all`
 
 The terminal should output something like the following:
@@ -61,7 +61,7 @@ Copy and paste the url next to "Local" in your browser, and follow the instructi
 
 
 ### Download Server
-Starting the download server: `npm run serve`
+Starting the download server (must be in root directory of the app): `npm run serve`
 - The download server will continiously run in the terminal session until stopped.
 - Download status will print to the terminal.
 
