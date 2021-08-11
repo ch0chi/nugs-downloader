@@ -16,12 +16,9 @@ Node version >= 14.0.0
 1. `git clone git@github.com:ch0chi/nugs-downloader.git`
 2. `cd nugs-downloader`
 3. Run `npm install` in server root to install required packages for the server.
-4. Install and build client packages
-    - `cd client`
-    - `npm install && npm run build`
-5. Copy the .env.example file to a new .env file
-    - `cp .env.example .env` (make sure you are inside of the root directory)
-6. Configure the .env file
+4. Copy the .env.example file to a new .env file
+    - `cp .env.example .env`
+5. Configure the .env file
 ```
    BASE_DIR="<required: the directory where you want to all shows to download to.>"
    PROXY_HOST='<optional: the full url for the proxy host'
@@ -38,33 +35,28 @@ Node version >= 14.0.0
 When first using the app, you'll need to add the bookmarklet scripts to your browser's bookmark bar.
 Luckily, this app will auto-generate these into draggable links via a fancy front-end.
 
-Start up the client and api server (must be in the root directory of the app, not in client):
-`npm run start-all`
+Start the server by running `npm run serve`
 
-The terminal should output something like the following:
+The terminal will output a link to the bookmarklet generator url:
 ```
 
-   ┌────────────────────────────────────────┐
-   │                                        │
-   │   Serving!                             │
-   │                                        │
-   │   Local:  http://localhost:5000        │
-   │                                        │
-   │   Copied local address to clipboard!   │
-   │                                        │
-   └────────────────────────────────────────┘
+#################################################################
+####################### Bookmarklet URL #########################
+#################################################################
+           http://localhost:3000/public/bookmarklets
+#################################################################
+
 
 ```
-Copy and paste the url next to "Local" in your browser, and follow the instructions provided.
+Copy and paste the bookmarklet url into your browser, and follow the instructions provided.
 
-**Note:** you can keep the terminal session running after this step. The download server will be running. However, for future use, you will only need to start the download server (See Download Server below).
+**Note:** you can keep the terminal session running after this step. The download server will be running.
 
 
-### Download Server
+### Starting the Server
 Starting the download server (must be in root directory of the app): `npm run serve`
-- The download server will continiously run in the terminal session until stopped.
+- The download server will continuously run in the terminal session until stopped.
 - Download status will print to the terminal.
-
 
 ### Bookmarklets
 The app provides an auto-generated bookmarklet for each streaming platform.

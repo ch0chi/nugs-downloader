@@ -8,6 +8,7 @@ import {envConfig} from "./config/config.env.js";
 
 const app = express();
 
+app.set('view engine', 'ejs');
 app.use(express.json());
 
 //Initiate routing
@@ -58,7 +59,7 @@ const generateScript = () => {
 }
 
 console.log(chalk.yellow(`#################################################################`))
-console.log(chalk.yellow(`######################## Bookmarklet URL ########################`))
+console.log(chalk.yellow(`####################### Bookmarklet URL #########################`))
 console.log(chalk.yellow(`#################################################################`))
-console.log(chalk.bgCyan(chalk.black(generateScript())));
+console.log(chalk.cyan(`           ${envConfig.serverUrl}/public/bookmarklets`));
 console.log(chalk.yellow(`#################################################################`))

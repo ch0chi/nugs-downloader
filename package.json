@@ -20,6 +20,7 @@
     "chalk": "^3.0.0",
     "cors-anywhere": "^0.4.4",
     "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "progress": "^2.0.3",
     "yargs": "^17.1.0"

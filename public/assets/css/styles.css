@@ -1,0 +1,22 @@
+body{
+    min-height: 100vh;
+    padding: 0;
+    background:#1F2330;
+    width: 100%;
+    color:white;
+    text-align: center;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1.title{
+    color:white;
+}
+h2.subtitle{
+    color:white;
+}
+.big-arrow {
+    font-size:60px;
+    transform:rotate(315deg);
+}
