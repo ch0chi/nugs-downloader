@@ -2,7 +2,7 @@
   "name": "nugs-downloader",
   "version": "1.0.0",
   "description": "",
-  "main": "ApiTesting/nugsDownloader.js",
+  "main": "server.js",
   "scripts": {
     "serve": "node server.js",
     "watch": "nodemon server.js",

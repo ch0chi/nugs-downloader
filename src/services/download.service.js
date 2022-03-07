@@ -43,6 +43,21 @@ export class DownloadService {
         }
         data.pipe(writer)
     }
+
+    /**
+     * Prepares an album directory name for writing by replace all illegal directory values with underscores.
+     * @param artist
+     *  The artist directory name
+     * @param album
+     *  The album directory name
+     *  @returns {string}
+     *   The fully qualified directory name.
+     */
+    prepareAlbumDirName(artist, album) {
+        //album = album.replace(/\//g,'_');//replace the show date with underscores
+        album = album.replace(/[/\\?%*:|"<>]/g, '_').trim();
+        return `${artist}/${album}`
+    }
     async createFolder(dir) {
         if(!fs.existsSync((dir))) {
             try{

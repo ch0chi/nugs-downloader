@@ -20,7 +20,7 @@ export class DownloadController {
 
         const baseDir = process.env.BASE_DIR;
         const artistDirName = `${baseDir}${artist.trim()}`;
-        const albumDirName = `${artistDirName}/${album.replace(/\//g,'_').trim()}`;
+        const albumDirName = this.downloadService.prepareAlbumDirName(artistDirName,album);
 
         //Create directories
         try{
