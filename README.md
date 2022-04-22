@@ -8,6 +8,8 @@ An app that downloads **any** show from either nugs.net or plus.livephish.com wi
 
 **Note: You must be a Nugs member to download shows off of Nugs, or a Live Phish Plus member to download shows off of Live Phish Plus.**
 
+**Note (04/2022 update): I am currently updating the LivePhish script to work. It seems a bug has arisen that requires the `tk` url param
+to be present when fetching a track. I'll update this within the week.**
 ## Requirements:
 Node version >= 14.0.0
 
@@ -25,6 +27,10 @@ Node version >= 14.0.0
    PROXY_PORT='<optional: the proxy host port>'
    SERVER_HOST='<optional: the full url for the api server host>'
    SERVER_PORT='<optional: the api server host port>'
+   LIVE_PHISH_TK='<required if downloading for live phish:
+    the tk url param found when playing a song.
+    Check the console for the value.
+    Should appear when the streamPlayer attempts to fetch a track.>
    ```
 - Gotchas and Notes
     - When setting the BASE_DIR variable, be sure to include a trailing slash at the end of the path.

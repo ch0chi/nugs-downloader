@@ -8,8 +8,9 @@ export class LivephishController {
     async getLivePhishScope(req,res) {
         const cookies = req.body.cookies;
         const recording = req.body.recording;
+        const user = req.body.user;
 
-        const livePhish = new LivePhish(cookies, recording);
+        const livePhish = new LivePhish(cookies, user, recording);
 
         try{
             const tracks = await livePhish.getTrackUrls();
@@ -27,7 +28,7 @@ export class LivephishController {
     }
 
     async generateBookmarklet(req,res) {
-        const bookmarklet = `javascript: (()=>{let e=document.getElementById("you-enjoy-myself");e&&e.parentNode.removeChild(e);let t=document.createElement("script");t.id="you-enjoy-myself",t.type="text/javascript";let o=()=>{const e=document.cookie;let t=angular.element("[ng-controller=AppController]").scope().$$childHead,o=t.$$nextSibling;const n=(o=o?t.$$nextSibling.recording:t.$$childHead.$$nextSibling.recording).getTracks();let i=[];for(const e of n)i.push({id:e.ID(),title:e.title()});let l={cookies:e,recording:{album:o.title(),artist:o.artistName(),tracks:i}};const c=\`${envConfig.proxyUrl}/${envConfig.serverUrl}/api/livephish\`;fetch(c,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(l)})};t.appendChild(document.createTextNode(o)),document.body.appendChild(t),o()})(document);`;
+        const bookmarklet = `javascript: (()=>{let a=document.getElementById("you-enjoy-myself");a&&a.parentNode.removeChild(a);let b=document.createElement("script");b.id="you-enjoy-myself",b.type="text/javascript";let c=()=>{const a=document.cookie;let b=angular.element("[ng-controller=AppController]").scope(),c=b.$$childHead.$$nextSibling,d={};d=b.hasOwnProperty("userInfo")?b.userInfo:b.user,c=c?b.$$childHead.$$nextSibling.recording:b.$$childHead.$$childHead.$$nextSibling.recording;const e=c.getTracks();let f=[];for(const a of e)f.push({id:a.ID(),title:a.title()});let g={cookies:a,recording:{album:c.title(),artist:c.artistName(),tracks:f},user:{startDateStamp:d.subStartDateStamp(),endDateStamp:d.subEndDateStamp(),nn_userID:d.ID(),subCostplanIDAccessList:d.subCostplanIDAccessList(),subscriptionID:d.subID()}};const h=\`${envConfig.proxyUrl}/${envConfig.serverUrl}/api/livephish\`,i=fetch(h,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(g)})};b.appendChild(document.createTextNode(c)),document.body.appendChild(b),c()})(document);`;
         return res.json({data:bookmarklet});
     }
 }
