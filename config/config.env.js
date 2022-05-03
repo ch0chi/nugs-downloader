@@ -17,7 +17,6 @@ const baseConfig = {
     proxyPort: config.PROXY_PORT || `8121`,
     serverHost: config.SERVER_HOST || `localhost`,
     serverPort: config.SERVER_PORT || `3000`,
-    livePhishTK: config.LIVE_PHISH_TK
 }
 
 const urlConfig = {
