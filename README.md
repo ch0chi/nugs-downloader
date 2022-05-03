@@ -6,13 +6,8 @@
 
 An app that downloads **any** show from either nugs.net or plus.livephish.com with a click of a button.
 
-**Note: You must be a Nugs member to download shows off of Nugs, or a Live Phish Plus member to download shows off of Live Phish Plus.**
-
-**Note (04/2022 update): I am currently updating the LivePhish script to work. It seems a bug has arisen that requires the `tk` url param
-to be present when fetching a track. I'll update this within the week.**
 ## Requirements:
-Node version >= 14.0.0
-
+- Node version >= 14.0.0
 ## Installation:
 
 1. `git clone git@github.com:ch0chi/nugs-downloader.git`
@@ -27,10 +22,6 @@ Node version >= 14.0.0
    PROXY_PORT='<optional: the proxy host port>'
    SERVER_HOST='<optional: the full url for the api server host>'
    SERVER_PORT='<optional: the api server host port>'
-   LIVE_PHISH_TK='<required if downloading for live phish:
-    the tk url param found when playing a song.
-    Check the console for the value.
-    Should appear when the streamPlayer attempts to fetch a track.>
    ```
 - Gotchas and Notes
     - When setting the BASE_DIR variable, be sure to include a trailing slash at the end of the path.
@@ -72,3 +63,11 @@ If you ever need to re-generate the bookmarklets, follow the "First Time Usage" 
 I provided a bash shell script that will convert all ".m4a" files into .mp3 files. You'll need to install ffmpeg to use the shell script.
 - The shell script can be run either inside of the downloaded album directory or outside.
 - The script will first convert the track to mp3 and then delete the old m4a track.
+
+###Notes
+- You must have an active subscription/trial to Nugs.net to download shows off of nugs.
+- You must have an active subscription/trial to Live Phish Plus to download shows off of live phish plus.
+### Disclaimer
+- I am not responsible for how this app is used.
+- I am not affiliated with Nugs.net or Live Phish Plus.
+- Always support your favorite artists by buying merch, going to shows, and purchasing recordings.
